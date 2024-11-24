@@ -224,7 +224,7 @@ app.get('/', (req, res) => {
 });
 
 // Configuración del servidor
-const PORT = 8000;
+const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
