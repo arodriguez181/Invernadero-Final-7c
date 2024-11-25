@@ -221,7 +221,7 @@ app.get('/api/sensores/ultimos/:dato', async (req, res) => {
   
 // Servir archivos estáticos
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'server.js'));
 });
 
 // Configuración del servidor
