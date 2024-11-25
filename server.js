@@ -6,13 +6,15 @@ const path = require('path');
 require('dotenv').config(); // Importar dotenv
 
 const app = express();
-const filePath = path.join(__dirname, './server.js'); // Ejemplo para acceder a un archivo en el mismo directorio
+
 console.log(`Ruta al archivo: ${filePath}`)
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public'))); // Sirve los archivos estáticos desde la carpeta 'public'
+
 
 // Conexión a MongoDB
 mongoose.connect(process.env.MONGO_URI, {
