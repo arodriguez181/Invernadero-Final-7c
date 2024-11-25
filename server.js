@@ -6,6 +6,8 @@ const path = require('path');
 require('dotenv').config(); // Importar dotenv
 
 const app = express();
+const filePath = path.join(__dirname, './server.js'); // Ejemplo para acceder a un archivo en el mismo directorio
+console.log(`Ruta al archivo: ${filePath}`)
 
 // Middleware
 app.use(cors());
