@@ -7,14 +7,11 @@ require('dotenv').config(); // Importar dotenv
 
 const app = express();
 
-console.log(`Ruta al archivo: ${filePath}`)
 
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
-app.use(express.static(path.join(__dirname, 'public'))); // Sirve los archivos estáticos desde la carpeta 'public'
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Conexión a MongoDB
 mongoose.connect(process.env.MONGO_URI, {
@@ -228,7 +225,7 @@ app.get('/', (req, res) => {
 });
 
 // Configuración del servidor
-const PORT = 8080;
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
