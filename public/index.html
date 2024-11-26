@@ -64,15 +64,6 @@
             localStorage.removeItem('userId');
             window.location.href = 'login.html';
         }
-
-        // Verificar si el usuario está logueado
-        window.onload = function() {
-            const userId = localStorage.getItem('userId');
-            if (userId) {
-                document.querySelector('.nav').style.display = 'none';
-                document.getElementById('userContent').style.display = 'block';
-            }
-        }
     </script>
      <script src="loader.js"></script>
 </body>
