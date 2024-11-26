@@ -11,7 +11,7 @@
     <script>
        
 
-        var client = mqtt.connect("ws://test.mosquitto.org:8080/mqtt");
+        var client = mqtt.connect("wss://test.mosquitto.org:8081/mqtt");
         let datosSensores = JSON.parse(localStorage.getItem('datosSensores')) || {};
 
         function EventoConectar() {
