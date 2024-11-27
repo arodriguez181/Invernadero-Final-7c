@@ -64,7 +64,7 @@
         });
 
         function enviarDatosSensor(type, value, timestamp) {
-            fetch('http://localhost:8080/api/sensores', {
+            fetch('https://invernadero7c.azurewebsites.net/api/sensores', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
